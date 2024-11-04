@@ -1,10 +1,13 @@
-public class fire extends Card {
+public class fire extends Energy {
 
     public fire(){
 
        setName("fire");
     }
 
-    
+@Override
+public String toString() {
+    return getName(); 
+}
     
 }

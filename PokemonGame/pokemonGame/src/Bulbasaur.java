@@ -1,7 +1,5 @@
 
-public class Bulbasaur extends Pokemon implements Attackable {
-    
-    
+public class Bulbasaur extends Pokemon  {
     
 /**
  * Constructs an Bulbasaur object with the specified name.
@@ -9,11 +7,11 @@ public class Bulbasaur extends Pokemon implements Attackable {
  * @param name The name to assign to pokemon (Bulbasaur)
  */
 
-    public Bulbasaur(String name) {
+    public Bulbasaur() {
         setName("Bulbasaur");
+        setHp(70);
     }
-    
-    
+     
 /**
  * does a Leech Seed attack on a enemy, draining 20 HP from it
  * and giving it to this entity. If the target's HP is reduced by 20, 
@@ -36,5 +34,10 @@ public void leechseed(Attackable target) {
        
         leechseed(target);
     }
+
+@Override
+public String toString() {
+    return getName(); 
+}
    
 } 

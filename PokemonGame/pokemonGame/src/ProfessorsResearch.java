@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class ProfessorsResearch extends Trainer {
 
 
@@ -7,7 +8,7 @@ public class ProfessorsResearch extends Trainer {
  * @param name The name to assign to the trainer card (Professor's research)
  */
 
-    public ProfessorsResearch(String name) {
+    public ProfessorsResearch() {
         setName("ProfessorsResearch");
     }
 
@@ -20,11 +21,12 @@ public class ProfessorsResearch extends Trainer {
  *
  * @param deck The CardGame deck object
  */
-    public void playWith(CardGame deck){
-        deck.getDiscardHand().addAll(deck.getHand());
-        
-        deck.resetHand();
-        deck.AddCards();
+    public void playWith(CardGame deck, ArrayList<Card> hand){
+        deck.getDiscardHand().addAll(hand);
+        hand.clear();
+        deck.drawHand();
+
+
         
     }
     

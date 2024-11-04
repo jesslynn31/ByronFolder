@@ -8,17 +8,34 @@ public class Card {
  * @return the name as a String.
  */
 
-public String getName() {
-    return name;
-}
+ public Card(){
+    setName("");
+ }
 
 /**
  * Sets the card name to the specified value.
  *
- * @param n the name to set, represented as a String.
+ * @param name the name to set, represented as a String.
  */
-public void setName(String n) {
-    name = n;
+
+public void setName(String name) {
+    this.name = name;
+}
+
+
+/**
+ * gets the name of the card.
+ *
+ * @return the name as a String
+ */
+public String getName(){
+    return name;
+}
+
+
+@Override
+public String toString() {
+    return name; 
 }
 
 }

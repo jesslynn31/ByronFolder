@@ -1,7 +1,8 @@
+
 import java.util.Random;
 
 
-public class Eevee extends Pokemon implements Attackable {
+public class Eevee extends Pokemon {
 
     // this isn't 100% accurate but why are there 39439439 eevee cards?
     
@@ -11,8 +12,9 @@ public class Eevee extends Pokemon implements Attackable {
  * @param name The name to assign to the Pokemon (Eevee). 
  */
 
-    public Eevee(String name) {
+    public Eevee() {
         setName("Eevee");
+        setHp(70);
     }
 
 /**
@@ -32,6 +34,9 @@ public class Eevee extends Pokemon implements Attackable {
         target.setHp(resultingHp);
     }
 
+
+
+
 /**
  * performs a chargeup attack on a certain enemy based on a flip of a coin. 
  * If it lands on heads, Eevee does 30 damage, if not, she does nothing.
@@ -48,6 +53,9 @@ public class Eevee extends Pokemon implements Attackable {
                 int resultingHp = currentHp - 30;
                 target.setHp(resultingHp);
             }
+            System.out.println("Eevee used Charge Up!");
+            System.out.println("target's HP is now: " + target.getHp());
+
         
     }
 
@@ -55,7 +63,11 @@ public class Eevee extends Pokemon implements Attackable {
     @Override
     public void attack(Attackable target) {
        
-        lunge(target);
+        chargeUp(target);
+    }
+@Override
+    public String toString() {
+      return getName(); 
     }
    
 } 

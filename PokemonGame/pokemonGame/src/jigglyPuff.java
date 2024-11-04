@@ -1,8 +1,8 @@
-public class jigglyPuff extends Pokemon implements Attackable {
+public class JigglyPuff extends Pokemon {
 
 
-    public jigglyPuff(String name) {
-        setName("jifflyPuff");
+    public JigglyPuff() {
+        setName("JigglyPuff");
     }
 
     public void rollOut(Attackable target){

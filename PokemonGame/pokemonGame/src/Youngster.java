@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Youngster extends Trainer {
     
 
@@ -7,8 +9,8 @@ public class Youngster extends Trainer {
  * @param name The name to assign to the trainer card (Professor's research)
  */
 
- public Youngester(String name) {
-    setName("Youngester");
+ public Youngster() {
+    setName("Youngster");
 }
 
 /**
@@ -16,10 +18,12 @@ public class Youngster extends Trainer {
  * 
  * @param deck the deck to discard the hand and draw the hand into
  */
-public void playWithYoungester(CardGame deck){
+public void playWithYoungester(CardGame deck, ArrayList<Card> hand){
 
     deck.discardHand();
     deck.drawHand();
+    System.out.println("Youngster played!");
+    System.out.println("your new hand is: " + deck.getHand());
     
 }
 }

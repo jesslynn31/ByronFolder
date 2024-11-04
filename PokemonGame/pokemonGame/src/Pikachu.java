@@ -1,28 +1,37 @@
-public class Pikachu extends Pokemon implements Attackable {
+public class Pikachu extends Pokemon {
 
-    public Pikachu(){
-       setName("pikachu");
+    /**
+     * Constructs a new Pikachu with its name and HP
+     */
+    public Pikachu() {
+        setName("pikachu");
         setHp(60);
     }
 
-public void quickAttack(Attackable target) {
-    // Deal 10 damage
-    int currentHp = target.getHp();
-    int resultingHp = currentHp - 10;
-    target.setHp(resultingHp);
-}
-
-public void electroBall(Attackable target) {
-    //deal 60 dmg
-    int currentHp = target.getHp();
-    int resultingHp = currentHp - 60;
-    target.setHp(resultingHp);
-}
+    /**
+     * does a quick attack on the specified enemy.
+     * This attack reduces the enemy's HP by 10.
+     *
+     * @param target The Attackable entity that will receive the attack.
+     */
+    public void quickAttack(Attackable target) {
+        int currentHp = target.getHp();
+        int resultingHp = currentHp - 10;
+        target.setHp(resultingHp);
+        System.out.println("Pikachu used Quick attack!");
+        System.out.println("target's HP is now: " + target.getHp());
+    }
 
 @Override
 public void attack(Attackable target) {
    
     quickAttack(target);
 }
+
+@Override
+public String toString() {
+    return getName(); 
 }
+}
+
  

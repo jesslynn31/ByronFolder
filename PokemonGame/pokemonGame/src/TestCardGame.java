@@ -5,11 +5,13 @@ public class TestCardGame {
     
     
     CardGame test = new CardGame();
+    MonteCarlo test1 = new MonteCarlo();
 
 
-    //test.monteCarlo((double) count / 10000 * 100);
-    test.rareCandySimulator(1000000);
     
-   //test.run();
+   
+   //test1.monteCarlo();
+   //test1.rareCandySimulator(1000000);
+   test.run();
     }
 }
